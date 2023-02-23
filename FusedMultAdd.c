@@ -32,19 +32,18 @@ int main() {
         for(int i = 0; i < 4; i++){
             printf("%lf  ", resultadoFMA[i]);
         }
-
     }else if(opcao == 2){
         float vEntrada[8];
         printf("Digite 8 valores para o primeiro vetor: ");
-        scanf("%lf %lf %lf %lf %lf %lf %lf %lf", &vEntrada[0],&vEntrada[1],&vEntrada[2],&vEntrada[3], &vEntrada[4],&vEntrada[5],&vEntrada[6],&vEntrada[7]);
+        scanf("%f %f %f %f %f %f %f %f", &vEntrada[0],&vEntrada[1],&vEntrada[2],&vEntrada[3], &vEntrada[4],&vEntrada[5],&vEntrada[6],&vEntrada[7]);
         __m256 a = _mm256_setr_ps(vEntrada[0],vEntrada[1],vEntrada[2],vEntrada[3], vEntrada[4], vEntrada[5], vEntrada[6], vEntrada[7]);
 
         printf("Digite 8 valores para o segundo vetor: ");
-        scanf("%lf %lf %lf %lf %lf %lf %lf %lf", &vEntrada[0],&vEntrada[1],&vEntrada[2],&vEntrada[3], &vEntrada[4],&vEntrada[5],&vEntrada[6],&vEntrada[7]);
+        scanf("%f %f %f %f %f %f %f %f", &vEntrada[0],&vEntrada[1],&vEntrada[2],&vEntrada[3], &vEntrada[4],&vEntrada[5],&vEntrada[6],&vEntrada[7]);
         __m256 b = _mm256_setr_ps(vEntrada[0],vEntrada[1],vEntrada[2],vEntrada[3], vEntrada[4], vEntrada[5], vEntrada[6], vEntrada[7]);
 
         printf("Digite 8 valores para o terceiro vetor: ");
-        scanf("%lf %lf %lf %lf %lf %lf %lf %lf", &vEntrada[0],&vEntrada[1],&vEntrada[2],&vEntrada[3], &vEntrada[4],&vEntrada[5],&vEntrada[6],&vEntrada[7]);
+        scanf("%f %f %f %f %f %f %f %f", &vEntrada[0],&vEntrada[1],&vEntrada[2],&vEntrada[3], &vEntrada[4],&vEntrada[5],&vEntrada[6],&vEntrada[7]);
         __m256 c = _mm256_setr_ps(vEntrada[0],vEntrada[1],vEntrada[2],vEntrada[3], vEntrada[4], vEntrada[5], vEntrada[6], vEntrada[7]);
 
         __m256 resultado = _mm256_fmaddsub_ps(a, b, c);
@@ -54,7 +53,7 @@ int main() {
         for(int i = 0; i < 8; i++){
             printf("%f  ", resultadoFMA[i]);
         }
-        
+
     }else if(opcao == 3) {
         int vEntrada[8];
         printf("Digite 8 valores para o primeiro vetor: ");
