@@ -18,7 +18,6 @@ int main() {
     
     //Multiplica o vetorX com o vetor escalar e soma com o vetor y
     __m256 resultadoDAXPY = _mm256_fmadd_ps(vetorX, vetorEscalar, vetorY);
-    
     alignas(32) float vetorResultado[8];
     _mm256_store_ps(vetorResultado, resultadoDAXPY);
     printf("Resultado DAXPY \n%f, %f, %f, %f, %f, %f, %f, %f", vetorResultado[0], vetorResultado[1], vetorResultado[2], vetorResultado[3], vetorResultado[4], vetorResultado[5], vetorResultado[6], vetorResultado[7]);
