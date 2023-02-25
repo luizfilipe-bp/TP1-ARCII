@@ -11,7 +11,7 @@ int main() {
 
     //Pede o valor do escalar via cmd
     int escalar;
-    printf("Digite o valor do escalaaar: ");
+    printf("Digite o valor do escalar: ");
     scanf("%d", &escalar);
     //Set um vetor que possui todos valores o valor do escalar
     __m256 vetorEscalar = _mm256_set1_ps(escalar);
