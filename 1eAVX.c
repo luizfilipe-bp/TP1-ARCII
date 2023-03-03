@@ -10,10 +10,6 @@ int main() {
   
     __m256d vetorAVX = _mm256_setr_pd(1.0, 2.0, 4.0, 8.0);
     __m256d vetorAVXNegativos = _mm256_setr_pd(-2.0, -2.0, -4.0, -4.0);
-    
-    // soma os vetores de 256 bits que contém double
+    // soma os vetores de 256 bits e os elementos são double
     __m256d resultadoAVX = _mm256_add_pd(vetorAVX, vetorAVXNegativos);
-    double* f2 = (double*)&resultadoAVX;
-    printf("AVX \n%f, %f, %f, %f", f2[0], f2[1], f2[2], f2[3]);
-
 }
