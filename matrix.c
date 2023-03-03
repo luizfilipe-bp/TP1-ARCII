@@ -27,7 +27,7 @@ int main() {
         //vetor de quatro posições, quantidade máxima de colunas da matriz,
         //para receber os valores de entrada das colunas da matriz
         double matriz1[4] = {0,0,0,0};
-        //vetor de _256d para armazenar os valores de entrada de cada linha
+        //vetor de _m256d para armazenar os valores de entrada de cada linha
         //seu tamanho é 4 pois o número máximo de linhas da matriz é 4
         __m256d matriz1M256d[4];
 
