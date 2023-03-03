@@ -34,7 +34,7 @@ int main() {
         printf("Insira os valores do primeiro vetor\n");
         for(int i = 0; i < linhaMatriz1; i++){
             printf("Digite o valores linha %i: ", i+1);
-            for(int j = 0; j < linhaMatriz1; j++){
+            for(int j = 0; j < colunaMatriz1; j++){
                 scanf("%lf", &matriz1[j]);
             }    
             matriz1M256d[i] = _mm256_setr_pd(matriz1[0],matriz1[1],matriz1[2],matriz1[3]);
@@ -66,7 +66,7 @@ int main() {
 
         printf("Matriz resultante da soma\n");
         for(int i = 0; i < linhaMatriz1; i++){
-            for(int j = 0; j < linhaMatriz2; j++){
+            for(int j = 0; j < colunaMatriz1; j++){
                 printf(" %lf  ", matrizResultado[i][j]);
             }
             printf("\n");
