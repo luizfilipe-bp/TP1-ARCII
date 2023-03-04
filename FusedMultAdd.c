@@ -89,5 +89,5 @@ int main() {
             printf("%d  ", resultadoFMA[i]);
         }
     }
-    
+
 }
